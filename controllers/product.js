@@ -1,4 +1,5 @@
 const Product = require("../models/product");
+const User = require("../models/user");
 const slugify = require("slugify");
 
 exports.create = async (req, res) => {
@@ -86,6 +87,7 @@ exports.update = async (req, res) => {
 
 // WITH PAGINATION
 exports.list = async (req, res) => {
+    // console.table(req.body);
     try {
         // createdAt/updatedAt, desc/asc, 3
         const { sort, order, page } = req.body;
