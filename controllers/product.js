@@ -330,3 +330,4 @@ exports.searchFilters = async (req, res) => {
         await handleBrand(req, res, brand);
     }
 };
+
